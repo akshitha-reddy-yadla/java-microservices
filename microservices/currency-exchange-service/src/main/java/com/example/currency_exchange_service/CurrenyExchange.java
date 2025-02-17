@@ -2,13 +2,22 @@ package com.example.currency_exchange_service;
 
 import java.math.BigDecimal;
 
-public class CurrentExchange {
+public class CurrenyExchange {
 	private Long id;
 	private String from;
 	private String to;
 	private BigDecimal conversionMultiple;
+	private String environment;
 
-	public CurrentExchange() {
+	public String getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(String environment) {
+		this.environment = environment;
+	}
+
+	public CurrenyExchange() {
 	}
 
 	public Long getId() {
@@ -27,7 +36,7 @@ public class CurrentExchange {
 		this.from = from;
 	}
 
-	public CurrentExchange(Long id, String from, String to, BigDecimal conversionMultiple) {
+	public CurrenyExchange(Long id, String from, String to, BigDecimal conversionMultiple) {
 		super();
 		this.id = id;
 		this.from = from;
