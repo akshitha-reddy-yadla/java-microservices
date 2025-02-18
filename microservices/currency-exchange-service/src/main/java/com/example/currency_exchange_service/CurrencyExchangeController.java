@@ -15,8 +15,9 @@ public class CurrencyExchangeController {
 	private Environment environment;
 
 	@GetMapping("/currency-exchange/from/{from}/to/{to}")
-	public CurrenyExchange retrieveExchangeValue(@PathVariable String from, @PathVariable String to) {
-		CurrenyExchange currencyExchange = new CurrenyExchange(1000L, from, to , BigDecimal.valueOf(50));
+	public CurrencyExchange retrieveExchangeValue(@PathVariable String from, @PathVariable String to) {
+		CurrencyExchange currencyExchange = new CurrencyExchange(1000L, from, to, BigDecimal.valueOf(50));
+
 		String port = environment.getProperty("local.server.port");
 		currencyExchange.setEnvironment(port);
 		return currencyExchange;
