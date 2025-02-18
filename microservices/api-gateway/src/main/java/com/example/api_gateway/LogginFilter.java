@@ -19,7 +19,4 @@ public class LogginFilter implements GlobalFilter {
 		logger.info("PAth of the request requested: ", exchange.getRequest().getPath());
 		return chain.filter(exchange);
 	}
-	
-	
-
 }
